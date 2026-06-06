@@ -14,7 +14,7 @@ This platform provides an end-to-end simulated interview environment. It generat
 ## Features
 - **Tailored AI Interviews:** Dynamically generated questions based on the desired job role, description, and years of experience.
 - **Real-time Emotion & Face Detection:** Client-side emotion detection using `face-api.js` that tracks your dominant emotion, confidence level, and alerts you if you look away from the camera.
-- **Live Transcription:** Speech-to-text integration to automatically capture your spoken answers.
+- **Live Transcription (Whisper):** Speech-to-text integration using OpenAI Whisper to automatically and accurately capture your spoken answers.
 - **Detailed AI Feedback:** Receive a rating out of 10, an ideal answer comparison, and actionable feedback for every single question.
 - **Interview Analytics Dashboard:** Get an overall interview grade, track your dominant mood/confidence, and review past performances.
 - **Previous Year Questions (PYQs):** Access a repository of standard interview questions with properly formatted code-block solutions.
@@ -23,7 +23,7 @@ This platform provides an end-to-end simulated interview environment. It generat
 - **Frontend:** Next.js (App Router), React, Tailwind CSS, shadcn/ui, react-webcam
 - **Backend:** Next.js API Routes, Clerk (Authentication)
 - **Database:** PostgreSQL (Neon Serverless), Drizzle ORM
-- **APIs:** Google Gemini API (Generative AI)
+- **APIs:** OpenAI API (GPT-4o-mini for generation, Whisper for transcription)
 - **Hosting:** Vercel (Recommended)
 
 ## Codex / OpenAI Usage
@@ -33,7 +33,7 @@ Throughout the development of this project, AI tools (such as ChatGPT, GitHub Co
 - **Code Generation:** Rapidly scaffolding React components, building the modern UI with Tailwind CSS and shadcn/ui, and implementing complex features like real-time webcam recording and audio transcription.
 - **Debugging:** Troubleshooting and fixing issues with the `face-api.js` integration, resolving Next.js hydration and layout errors, and fixing database seeding scripts.
 - **Documentation:** Automatically generating and formatting this README and structuring the Previous Year Questions (PYQs) data formatting.
-- **API Integration:** Seamlessly integrating the Google Gemini API for prompt engineering and Clerk for secure user authentication.
+- **API Integration:** Seamlessly integrating the OpenAI API (`gpt-4o-mini`) for prompt engineering and Clerk for secure user authentication.
 
 ## Demo
 [Add your demo or pitch video link here]
@@ -51,4 +51,4 @@ npm install
 npm run dev
 ```
 
-> **Note:** You will need to set up your `.env.local` file with your Clerk API keys, Neon Database URL, and Gemini API key before running the application.
+> **Note:** You will need to set up your `.env.local` file with your Clerk API keys, Neon Database URL, and your `OPENAI_API_KEY` before running the application.
