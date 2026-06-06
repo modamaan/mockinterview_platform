@@ -52,3 +52,23 @@ npm run dev
 ```
 
 > **Note:** You will need to set up your `.env.local` file with your Clerk API keys, Neon Database URL, and your `OPENAI_API_KEY` before running the application.
+
+Create a `.env.local` file in the root of the project and add the following variables:
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+# Neon Database URL
+DRIZZLE_DB_URL=postgresql://user:password@host/dbname?sslmode=require
+
+# OpenAI API Key
+OPENAI_API_KEY=sk-...
+
+# Important information banner text
+NEXT_PUBLIC_INFORMATION="Please ensure you are in a quiet room and your webcam is enabled."
+NEXT_PUBLIC_QUESTION_NOTE="Click on 'Record Answer' when you want to answer the question. You can review your transcription before submitting."
+```
