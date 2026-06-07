@@ -1,4 +1,4 @@
-Ace your next interview :-  https://mockinterview-platform.vercel.app/
+ # Ace your next interview :-  https://mockinterview-platform.vercel.app/
 
 <img width="1918" height="931" alt="Screenshot 2026-06-07 052703" src="https://github.com/user-attachments/assets/2f99dae2-eafa-4e9f-880f-f36cbd8e8695" />
 # AI-Powered Mock Interview Platform
