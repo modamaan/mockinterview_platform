@@ -1,3 +1,4 @@
+<img width="1918" height="931" alt="Screenshot 2026-06-07 052703" src="https://github.com/user-attachments/assets/2f99dae2-eafa-4e9f-880f-f36cbd8e8695" />
 # AI-Powered Mock Interview Platform
 
 <img width="1901" height="874" alt="Screenshot 2026-02-08 153126" src="https://github.com/user-attachments/assets/39ced7a0-22a4-4329-93a5-0d9991dba2c9" />
@@ -36,11 +37,17 @@ Throughout the development of this project, AI tools (such as ChatGPT, GitHub Co
 - **API Integration:** Seamlessly integrating the OpenAI API (`gpt-4o-mini`) for prompt engineering and Clerk for secure user authentication.
 
 ## Demo
-[Add your demo or pitch video link here]
+
+https://github.com/user-attachments/assets/45752464-be07-49e9-aee1-9d68910e8f36
+
 
 ## Screenshots
 *(You can add more screenshots of the UI here)*
 <img width="1901" height="874" alt="Dashboard Screenshot" src="https://github.com/user-attachments/assets/39ced7a0-22a4-4329-93a5-0d9991dba2c9" />
+
+<img width="1918" height="931" alt="Screenshot 2026-06-07 052703" src="https://github.com/user-attachments/assets/b0cc16d9-5846-495e-bea4-10c02d1e3b98" />
+
+<img width="1918" height="913" alt="Screenshot 2026-06-07 052731" src="https://github.com/user-attachments/assets/4425bcc1-47b5-4e07-bf61-3ba59cb48b31" />
 
 ## How to Run Locally
 
