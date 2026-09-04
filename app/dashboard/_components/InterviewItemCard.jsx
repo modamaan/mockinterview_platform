@@ -52,27 +52,27 @@ const InterviewItemCard = ({ interview, onDelete }) => {
 
   return (
     <>
-      <div className="border border-gray-300 shadow-lg rounded-xl p-4 relative group hover:shadow-xl transition-shadow bg-white">
+      <div className="border border-gray-200 shadow-md rounded-lg p-6 relative group hover:shadow-lg transition-shadow bg-white">
         {/* Delete button — top-right corner */}
         <button
           onClick={() => setShowConfirm(true)}
-          className="absolute top-3 right-3 p-2 rounded-full text-gray-400 hover:text-red-600 hover:bg-red-100 transition-all opacity-0 group-hover:opacity-100"
+          className="absolute top-4 right-4 p-2 rounded-full text-gray-400 hover:text-red-600 hover:bg-red-100 transition-all opacity-0 group-hover:opacity-100"
           title="Delete interview"
         >
           <Trash2 className="h-5 w-5" />
         </button>
 
-        <h2 className="font-semibold text-lg text-primary pr-10">
+        <h2 className="font-semibold text-xl text-primary pr-10">
           {interview?.jobPosition}
         </h2>
-        <p className="text-sm text-gray-700 mt-1">
+        <p className="text-sm text-gray-600 mt-2">
           {interview?.jobExperience} Years of experience
         </p>
         <p className="text-xs text-gray-500 mt-1">
           Created At: {new Date(interview.createdAt).toLocaleDateString()}
         </p>
 
-        <div className="flex justify-between mt-4 gap-2">
+        <div className="flex justify-between mt-6 gap-3">
           <Button
             variant="super"
             onClick={onFeedback}
