@@ -90,6 +90,24 @@ const Header = ({ logo }) => {
               About
             </li>
           </Link>
+          <Link href="/dashboard/blog">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/blog" && "text-black font-bold"
+              }`}
+            >
+              Blog
+            </li>
+          </Link>
+          <Link href="/dashboard/careers">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/careers" && "text-black font-bold"
+              }`}
+            >
+              Careers
+            </li>
+          </Link>
         </ul>
         <div className="md:hidden">
           <button
@@ -212,6 +230,24 @@ const Header = ({ logo }) => {
                   }`}
                 >
                   About
+                </li>
+              </Link>
+              <Link href="/dashboard/blog">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/blog" && "text-black font-bold"
+                  }`}
+                >
+                  Blog
+                </li>
+              </Link>
+              <Link href="/dashboard/careers">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/careers" && "text-black font-bold"
+                  }`}
+                >
+                  Careers
                 </li>
               </Link>
             </ul>
