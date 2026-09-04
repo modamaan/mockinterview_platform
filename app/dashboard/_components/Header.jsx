@@ -6,6 +6,7 @@ import { UserButton, SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import { ModeToggle } from "@/components/ModeToggle";
 import Link from "next/link";
+
 const Header = ({ logo }) => {
   const [isUserButtonLoaded, setUserButtonLoaded] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -28,10 +29,9 @@ const Header = ({ logo }) => {
 
   const path = usePathname();
 
-  useEffect(() => {}, []);
   return (
-    <div className=" bg-secondary shadow-sm ">
-      <div className="w-[80%] m-auto flex gap-4 items-center justify-between">
+    <div className="bg-secondary shadow-sm">
+      <div className="w-[80%] m-auto flex gap-4 items-center justify-between py-4">
         <Link className="hidden md:block" href="/dashboard">
           <Image src={logo} width={80} height={80} alt="logo" />
         </Link>
@@ -39,7 +39,7 @@ const Header = ({ logo }) => {
           <Link href="/dashboard">
             <li
               className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
-                path == "/dashboard" && "text-black font-bold"
+                path === "/dashboard" && "text-black font-bold"
               }`}
             >
               Dashboard
@@ -48,30 +48,46 @@ const Header = ({ logo }) => {
           <Link href="/dashboard/question">
             <li
               className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
-                path == "/dashboard/question" && "text-black font-bold"
+                path === "/dashboard/question" && "text-black font-bold"
               }`}
             >
               Questions
             </li>
           </Link>
-
           <Link href="/dashboard/upgrade">
             <li
               className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
-                path == "/dashboard/upgrade" && "text-black font-bold"
+                path === "/dashboard/upgrade" && "text-black font-bold"
               }`}
             >
               Upgrade
             </li>
           </Link>
-
           <Link href="/dashboard/howit">
             <li
               className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
-                path == "/dashboard/howit" && "text-black font-bold"
+                path === "/dashboard/howit" && "text-black font-bold"
               }`}
             >
               How it works?
+            </li>
+          </Link>
+          <Link href="/dashboard/contact">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/contact" && "text-black font-bold"
+              }`}
+            >
+              Contact
+            </li>
+          </Link>
+          <Link href="/dashboard/about">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/about" && "text-black font-bold"
+              }`}
+            >
+              About
             </li>
           </Link>
         </ul>
@@ -129,7 +145,7 @@ const Header = ({ logo }) => {
                   afterSignInUrl="/dashboard"
                   afterSignUpUrl="/dashboard"
                 >
-                  <Button size="lg" varient="ghost">
+                  <Button size="lg" variant="ghost">
                     Login
                   </Button>
                 </SignInButton>
@@ -147,7 +163,7 @@ const Header = ({ logo }) => {
               <Link href="/dashboard">
                 <li
                   className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
-                    path == "/dashboard" && "text-black font-bold"
+                    path === "/dashboard" && "text-black font-bold"
                   }`}
                 >
                   Dashboard
@@ -156,7 +172,7 @@ const Header = ({ logo }) => {
               <Link href="/dashboard/question">
                 <li
                   className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
-                    path == "/dashboard/question" && "text-black font-bold"
+                    path === "/dashboard/question" && "text-black font-bold"
                   }`}
                 >
                   Questions
@@ -165,7 +181,7 @@ const Header = ({ logo }) => {
               <Link href="/dashboard/upgrade">
                 <li
                   className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
-                    path == "/dashboard/upgrade" && "text-black font-bold"
+                    path === "/dashboard/upgrade" && "text-black font-bold"
                   }`}
                 >
                   Upgrade
@@ -174,10 +190,28 @@ const Header = ({ logo }) => {
               <Link href="/dashboard/howit">
                 <li
                   className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
-                    path == "/dashboard/howit" && "text-black font-bold"
+                    path === "/dashboard/howit" && "text-black font-bold"
                   }`}
                 >
                   How it works?
+                </li>
+              </Link>
+              <Link href="/dashboard/contact">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/contact" && "text-black font-bold"
+                  }`}
+                >
+                  Contact
+                </li>
+              </Link>
+              <Link href="/dashboard/about">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/about" && "text-black font-bold"
+                  }`}
+                >
+                  About
                 </li>
               </Link>
             </ul>
