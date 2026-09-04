@@ -4,7 +4,7 @@ import { cva, VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-// Define button variants with styles for different states and variants
+// Define button variants with styles for different use cases
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 uppercase tracking-wide",
   {
@@ -25,6 +25,9 @@ const buttonVariants = cva(
         ghost: "bg-transparent text-slate-500 border-transparent border-0 hover:bg-slate-100",
         sidebar: "bg-transparent text-slate-500 border-2 border-transparent hover:bg-slate-100 transition-none",
         sidebarOutline: "bg-sky-500/15 text-sky-500 border-sky-300 border-2 hover-sky-500/20 transition-none",
+        // New variants for additional use cases
+        success: "bg-emerald-500 text-white hover:bg-emerald-600 border-emerald-700 border-b-4 active:border-b-0",
+        warning: "bg-yellow-400 text-black hover:bg-yellow-500 border-yellow-600 border-b-4 active:border-b-0",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -42,15 +45,14 @@ const buttonVariants = cva(
 
 type ButtonVariant = VariantProps<typeof buttonVariants>;
 
-// Define the ButtonProps interface extending HTMLButtonElement attributes and button variants
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, ButtonVariant {
   asChild?: boolean;
 }
 
-// Create a Button component with forwardRef to allow ref forwarding
+// Button component with support for different variants and sizes
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"; // Use Slot if asChild is true, otherwise use button
+    const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
@@ -60,7 +62,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
+Button.displayName = "Button";
 
-Button.displayName = "Button"; // Set display name for the component
-
-export { Button, buttonVariants }; // Export Button and buttonVariants
+export { Button, buttonVariants };
