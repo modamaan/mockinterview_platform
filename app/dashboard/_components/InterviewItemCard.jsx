@@ -52,27 +52,27 @@ const InterviewItemCard = ({ interview, onDelete }) => {
 
   return (
     <>
-      <div className="border border-gray-200 shadow-sm rounded-lg p-3 relative group hover:shadow-md transition-shadow">
+      <div className="border border-gray-300 shadow-md rounded-lg p-4 relative group hover:shadow-lg transition-shadow bg-white">
         {/* Delete button — top-right corner */}
         <button
           onClick={() => setShowConfirm(true)}
-          className="absolute top-2 right-2 p-1.5 rounded-md text-gray-300 hover:text-red-500 hover:bg-red-50 transition-all opacity-0 group-hover:opacity-100"
+          className="absolute top-2 right-2 p-1.5 rounded-full text-gray-400 hover:text-red-600 hover:bg-red-100 transition-all opacity-0 group-hover:opacity-100"
           title="Delete interview"
         >
-          <Trash2 className="h-4 w-4" />
+          <Trash2 className="h-5 w-5" />
         </button>
 
-        <h2 className="font-bold text-primary pr-8">
+        <h2 className="font-bold text-lg text-primary pr-8">
           {interview?.jobPosition}
         </h2>
-        <h2 className="text-sm text-gray-600">
+        <p className="text-sm text-gray-700">
           {interview?.jobExperience} Years of experience
-        </h2>
-        <h2 className="text-xs text-gray-400">
-          Created At: {interview.createdAt}
-        </h2>
+        </p>
+        <p className="text-xs text-gray-500">
+          Created At: {new Date(interview.createdAt).toLocaleDateString()}
+        </p>
 
-        <div className="flex justify-between mt-2 gap-1 md:gap-5">
+        <div className="flex justify-between mt-3 gap-2">
           <Button
             variant="super"
             onClick={onFeedback}
