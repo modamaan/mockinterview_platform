@@ -19,29 +19,29 @@ body,
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 210 100% 56%;
+    --primary: 220 90% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 16% 93%;
-    --secondary-foreground: 210 100% 56%;
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 90% 55%;
 
-    --muted: 210 16% 93%;
-    --muted-foreground: 210 10% 40%;
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 10% 40%;
 
-    --accent: 34 100% 50%;
+    --accent: 30 100% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 80% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 16% 80%;
-    --input: 210 16% 80%;
-    --ring: 210 100% 56%;
+    --border: 220 15% 80%;
+    --input: 220 15% 80%;
+    --ring: 220 90% 55%;
 
-    --radius: 0.75rem;
-    --font-sans: 'Inter', sans-serif;
-    --font-serif: 'Merriweather', serif;
-    --font-mono: 'Fira Code', monospace;
+    --radius: 0.5rem;
+    --font-sans: 'Roboto', sans-serif;
+    --font-serif: 'Georgia', serif;
+    --font-mono: 'Courier New', monospace;
   }
 
   .dark {
@@ -54,24 +54,24 @@ body,
     --popover: 0 0% 15%;
     --popover-foreground: 0 0% 90%;
 
-    --primary: 210 100% 70%;
+    --primary: 220 90% 70%;
     --primary-foreground: 0 0% 10%;
 
-    --secondary: 210 16% 20%;
-    --secondary-foreground: 210 100% 70%;
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 220 90% 70%;
 
-    --muted: 210 16% 20%;
-    --muted-foreground: 210 10% 60%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 34 100% 60%;
+    --accent: 30 100% 60%;
     --accent-foreground: 0 0% 10%;
 
-    --destructive: 0 62.8% 40.6%;
+    --destructive: 0 60% 40%;
     --destructive-foreground: 0 0% 90%;
 
-    --border: 210 16% 30%;
-    --input: 210 16% 30%;
-    --ring: 210 100% 70%;
+    --border: 220 15% 30%;
+    --input: 220 15% 30%;
+    --ring: 220 90% 70%;
   }
 }
 
@@ -82,13 +82,13 @@ body,
   }
   body {
     @apply bg-background text-foreground;
-    line-height: 1.6;
-    letter-spacing: 0.015em;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
   }
   code, pre {
     font-family: var(--font-mono);
