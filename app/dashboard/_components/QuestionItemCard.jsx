@@ -9,19 +9,19 @@ const QuestionItemCard = ({ question }) => {
   };
 
   return (
-    <div className="border border-gray-300 shadow-md rounded-xl p-4 bg-white hover:shadow-lg transition-shadow duration-300">
-      <h2 className="font-semibold text-lg text-primary mb-1">
+    <div className="border border-gray-200 shadow-lg rounded-lg p-6 bg-white hover:shadow-xl transition-shadow duration-300">
+      <h2 className="font-bold text-xl text-primary mb-2">
         {question?.jobPosition}
       </h2>
-      <p className="text-sm text-gray-500 mb-2">
+      <p className="text-md text-gray-600 mb-3">
         {question?.jobExperience} Years of Experience
       </p>
-      <p className="text-xs text-gray-400 mb-4">
+      <p className="text-sm text-gray-500 mb-5">
         Created At: {new Date(question.createdAt).toLocaleDateString()}
       </p>
 
-      <div className="flex justify-between mt-3">
-        <Button onClick={onStart} size="sm" className="w-full bg-primary text-white hover:bg-primary-dark transition-colors duration-200">
+      <div className="flex justify-end mt-4">
+        <Button onClick={onStart} size="md" className="w-full bg-primary text-white hover:bg-primary-dark transition-colors duration-200">
           Start
         </Button>
       </div>
