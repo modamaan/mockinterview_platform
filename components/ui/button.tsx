@@ -4,32 +4,32 @@ import { cva, VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
+// Define button variants with updated styles for improved aesthetics and usability
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 uppercase tracking-wide",
   {
     variants: {
       variant: {
-        default: "bg-white text-black border-slate-200 border-2 border-b-4 active:border-b-2 hover:text-slate-500 hover:bg-slate-100",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        // ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        primary: "bg-sky-400 text-primary-foreground hover:bg-sky-400/90 border-sky-500 border-b-4 active:border-b-0",
-        primaryOutline: "bg-white text-sky-500 hover:bg-slate-100",
-        secondary: "bg-green-500 text-primary-foreground hover:bg-green-500/90 border-green-600 border-b-4 active:border-b-0",
-        secondaryOutline: "bg-white text-green-500 hover:bg-slate-100",
-        danger: "bg-rose-400 text-primary-foreground hover:bg-rose-400/90 border-rose-500 border-b-4 active:border-b-0",
-        dangerOutline: "bg-white text-rose-500 hover:bg-slate-100",
-        super: "bg-indigo-400 text-primary-foreground hover:bg-indigo-400/90 border-indigo-500 border-b-4 active:border-b-0",
-        superOutline: "bg-white text-indigo-500 hover:bg-slate-100",
-        ghost: "bg-transparent text-slate-500 border-transparent border-0 hover:bg-slate-100",
-        sidebar: "bg-transparent text-slate-500 border-2 border-transparent hover:bg-slate-100 transition-none",
-        sidebarOutline: "bg-sky-500/15 text-sky-500 border-sky-300 border-2 hover-sky-500/20 transition-none",
+        default: "bg-white text-black border-slate-200 border-2 border-b-4 active:border-b-2 hover:text-slate-600 hover:bg-slate-200",
+        destructive: "bg-red-600 text-white hover:bg-red-500",
+        outline: "border border-gray-300 bg-transparent hover:bg-gray-100 hover:text-gray-800",
+        link: "text-blue-600 underline-offset-4 hover:underline",
+        primary: "bg-blue-500 text-white hover:bg-blue-400 border-blue-600 border-b-4 active:border-b-2",
+        primaryOutline: "bg-transparent text-blue-500 border-blue-500 border-2 hover:bg-blue-50",
+        secondary: "bg-green-500 text-white hover:bg-green-400 border-green-600 border-b-4 active:border-b-2",
+        secondaryOutline: "bg-transparent text-green-500 border-green-500 border-2 hover:bg-green-50",
+        danger: "bg-red-500 text-white hover:bg-red-400 border-red-600 border-b-4 active:border-b-2",
+        dangerOutline: "bg-transparent text-red-500 border-red-500 border-2 hover:bg-red-50",
+        super: "bg-purple-500 text-white hover:bg-purple-400 border-purple-600 border-b-4 active:border-b-2",
+        superOutline: "bg-transparent text-purple-500 border-purple-500 border-2 hover:bg-purple-50",
+        ghost: "bg-transparent text-gray-600 hover:bg-gray-100",
+        sidebar: "bg-transparent text-gray-600 hover:bg-gray-100",
+        sidebarOutline: "bg-blue-50 text-blue-600 border-blue-300 border-2 hover:bg-blue-100",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        lg: "h-12 rounded-lg px-8",
         icon: "h-10 w-10",
       },
     },
@@ -61,5 +61,3 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button";
 
 export { Button, buttonVariants };
-
-
