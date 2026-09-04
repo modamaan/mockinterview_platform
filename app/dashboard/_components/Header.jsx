@@ -31,7 +31,7 @@ const Header = ({ logo }) => {
 
   return (
     <div className="bg-secondary shadow-sm">
-      <div className="w-[80%] m-auto flex gap-4 items-center justify-between py-4">
+      <div className="w-[80%] m-auto flex gap-4 items-center justify-between">
         <Link className="hidden md:block" href="/dashboard">
           <Image src={logo} width={80} height={80} alt="logo" />
         </Link>
