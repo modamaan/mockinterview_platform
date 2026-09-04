@@ -9,7 +9,7 @@ const QuestionItemCard = ({ question }) => {
   };
 
   return (
-    <div className="border border-gray-300 shadow-md rounded-xl p-6 bg-white hover:shadow-2xl transition-shadow duration-300">
+    <div className="border border-gray-300 shadow-md rounded-xl p-6 bg-white hover:shadow-lg transition-shadow duration-300">
       <h2 className="font-semibold text-2xl text-primary mb-3">
         {question?.jobPosition}
       </h2>
@@ -21,7 +21,11 @@ const QuestionItemCard = ({ question }) => {
       </p>
 
       <div className="flex justify-end mt-5">
-        <Button onClick={onStart} size="lg" className="w-full bg-primary text-white hover:bg-primary-dark transition-colors duration-200">
+        <Button
+          onClick={onStart}
+          size="lg"
+          className="w-full bg-primary text-white hover:bg-primary-dark transition-colors duration-200"
+        >
           Start
         </Button>
       </div>
