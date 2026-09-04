@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-// Card component with updated styles for a more modern look
 const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -15,7 +14,6 @@ const Card = React.forwardRef(({ className, ...props }, ref) => (
 ));
 Card.displayName = "Card";
 
-// CardHeader with updated padding and background color for better contrast
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -25,12 +23,11 @@ const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
 ));
 CardHeader.displayName = "CardHeader";
 
-// CardTitle with updated font size and weight for improved readability
 const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <h3
     ref={ref}
     className={cn(
-      "text-xl font-bold leading-tight tracking-tight text-gray-800",
+      "text-2xl font-semibold leading-tight tracking-tight text-gray-800",
       className
     )}
     {...props}
@@ -38,27 +35,24 @@ const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
 ));
 CardTitle.displayName = "CardTitle";
 
-// CardDescription with a lighter text color for a more subtle appearance
 const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm text-gray-500", className)}
+    className={cn("text-sm text-gray-600", className)}
     {...props}
   />
 ));
 CardDescription.displayName = "CardDescription";
 
-// CardContent with adjusted padding for better content spacing
 const CardContent = React.forwardRef(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-5 pt-0", className)} {...props} />
 ));
 CardContent.displayName = "CardContent";
 
-// CardFooter with a border-top and padding adjustments for consistency
 const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex items-center p-5 pt-0 border-t border-gray-100", className)}
+    className={cn("flex items-center p-5 pt-0 border-t border-gray-200", className)}
     {...props}
   />
 ));
