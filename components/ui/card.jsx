@@ -1,22 +1,20 @@
-```jsx
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-// Card component with improved hover effect and accessibility features
+// Card component with improved design and hover effect
 const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      "rounded-xl border bg-card text-card-foreground shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary",
+      "rounded-xl border bg-card text-card-foreground shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl",
       className
     )}
-    tabIndex={0} // Make the card focusable
     {...props}
   />
 ));
 Card.displayName = "Card";
 
-// CardHeader component with consistent padding and background
+// CardHeader component with updated styling
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -39,7 +37,7 @@ const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
 ));
 CardTitle.displayName = "CardTitle";
 
-// CardDescription component with muted text color
+// CardDescription component with muted text style
 const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
   <p
     ref={ref}
@@ -55,7 +53,7 @@ const CardContent = React.forwardRef(({ className, ...props }, ref) => (
 ));
 CardContent.displayName = "CardContent";
 
-// CardFooter component with consistent padding and background
+// CardFooter component with updated styling
 const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -65,8 +63,5 @@ const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
 ));
 CardFooter.displayName = "CardFooter";
 
-// Export all components
+// Exporting all components
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-```
-
-This updated code includes improvements for accessibility by making the `Card` component focusable and adding focus styles. The hover effect is enhanced for better user interaction feedback. The code maintains a consistent style and structure, ensuring a seamless user experience.
