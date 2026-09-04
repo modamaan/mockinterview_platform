@@ -39,9 +39,9 @@ body,
     --ring: 220 90% 55%;
 
     --radius: 0.5rem;
-    --font-sans: 'Roboto', sans-serif;
-    --font-serif: 'Georgia', serif;
-    --font-mono: 'Courier New', monospace;
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Merriweather', serif;
+    --font-mono: 'Fira Code', monospace;
   }
 
   .dark {
@@ -82,13 +82,13 @@ body,
   }
   body {
     @apply bg-background text-foreground;
-    line-height: 1.8;
+    line-height: 1.7;
     letter-spacing: 0.02em;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
     margin-top: 0;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.6em;
   }
   code, pre {
     font-family: var(--font-mono);
