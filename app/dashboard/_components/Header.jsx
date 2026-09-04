@@ -29,17 +29,6 @@ const Header = ({ logo }) => {
 
   const path = usePathname();
 
-  const navLinks = [
-    { href: "/dashboard", label: "Dashboard" },
-    { href: "/dashboard/question", label: "Questions" },
-    { href: "/dashboard/upgrade", label: "Upgrade" },
-    { href: "/dashboard/howit", label: "How it works?" },
-    { href: "/dashboard/contact", label: "Contact" },
-    { href: "/dashboard/about", label: "About" },
-    { href: "/dashboard/blog", label: "Blog" },
-    { href: "/dashboard/careers", label: "Careers" },
-  ];
-
   return (
     <div className="bg-secondary shadow-sm">
       <div className="w-[80%] m-auto flex gap-4 items-center justify-between">
@@ -47,17 +36,78 @@ const Header = ({ logo }) => {
           <Image src={logo} width={80} height={80} alt="logo" />
         </Link>
         <ul className="hidden md:flex gap-6">
-          {navLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
-              <li
-                className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
-                  path === link.href && "text-black font-bold"
-                }`}
-              >
-                {link.label}
-              </li>
-            </Link>
-          ))}
+          <Link href="/dashboard">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard" && "text-black font-bold"
+              }`}
+            >
+              Dashboard
+            </li>
+          </Link>
+          <Link href="/dashboard/question">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/question" && "text-black font-bold"
+              }`}
+            >
+              Questions
+            </li>
+          </Link>
+          <Link href="/dashboard/upgrade">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/upgrade" && "text-black font-bold"
+              }`}
+            >
+              Upgrade
+            </li>
+          </Link>
+          <Link href="/dashboard/howit">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/howit" && "text-black font-bold"
+              }`}
+            >
+              How it works?
+            </li>
+          </Link>
+          <Link href="/dashboard/contact">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/contact" && "text-black font-bold"
+              }`}
+            >
+              Contact
+            </li>
+          </Link>
+          <Link href="/dashboard/about">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/about" && "text-black font-bold"
+              }`}
+            >
+              About
+            </li>
+          </Link>
+          <Link href="/dashboard/blog">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/blog" && "text-black font-bold"
+              }`}
+            >
+              Blog
+            </li>
+          </Link>
+          <Link href="/dashboard/careers">
+            <li
+              className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                path === "/dashboard/careers" && "text-black font-bold"
+              }`}
+            >
+              Careers
+            </li>
+          </Link>
         </ul>
         <div className="md:hidden">
           <button
@@ -109,7 +159,7 @@ const Header = ({ logo }) => {
               </SignedIn>
               <SignedOut>
                 <SignInButton
-                  mode="model"
+                  mode="modal"
                   afterSignInUrl="/dashboard"
                   afterSignUpUrl="/dashboard"
                 >
@@ -128,17 +178,78 @@ const Header = ({ logo }) => {
         <div className="md:hidden">
           <div className="px-5">
             <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navLinks.map((link) => (
-                <Link key={link.href} href={link.href}>
-                  <li
-                    className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
-                      path === link.href && "text-black font-bold"
-                    }`}
-                  >
-                    {link.label}
-                  </li>
-                </Link>
-              ))}
+              <Link href="/dashboard">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard" && "text-black font-bold"
+                  }`}
+                >
+                  Dashboard
+                </li>
+              </Link>
+              <Link href="/dashboard/question">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/question" && "text-black font-bold"
+                  }`}
+                >
+                  Questions
+                </li>
+              </Link>
+              <Link href="/dashboard/upgrade">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/upgrade" && "text-black font-bold"
+                  }`}
+                >
+                  Upgrade
+                </li>
+              </Link>
+              <Link href="/dashboard/howit">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/howit" && "text-black font-bold"
+                  }`}
+                >
+                  How it works?
+                </li>
+              </Link>
+              <Link href="/dashboard/contact">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/contact" && "text-black font-bold"
+                  }`}
+                >
+                  Contact
+                </li>
+              </Link>
+              <Link href="/dashboard/about">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/about" && "text-black font-bold"
+                  }`}
+                >
+                  About
+                </li>
+              </Link>
+              <Link href="/dashboard/blog">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/blog" && "text-black font-bold"
+                  }`}
+                >
+                  Blog
+                </li>
+              </Link>
+              <Link href="/dashboard/careers">
+                <li
+                  className={`hover:text-black hover:font-bold transition-all cursor-pointer ${
+                    path === "/dashboard/careers" && "text-black font-bold"
+                  }`}
+                >
+                  Careers
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
