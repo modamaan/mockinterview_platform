@@ -5,11 +5,11 @@ import InterviewList from "./_components/InterviewList";
 
 const Dashboard = () => {
   return (
-    <div className="p-10 bg-gray-100 min-h-screen">
+    <div className="p-6 md:p-10 bg-gray-100 min-h-screen">
       <header className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="font-bold text-3xl text-blue-600">Dashboard</h1>
-          <p className="text-gray-600">
+          <h1 className="font-bold text-3xl text-blue-700">Dashboard</h1>
+          <p className="text-gray-600 mt-1">
             Create and start your AI Mockup Interview
           </p>
         </div>
@@ -17,15 +17,19 @@ const Dashboard = () => {
       </header>
 
       <main>
-        <section className="bg-white p-6 rounded-lg shadow-md mb-8">
-          <h2 className="font-semibold text-xl mb-4">Start a New Interview</h2>
+        <section className="mb-8">
+          <h2 className="font-semibold text-xl text-gray-800 mb-4">
+            Start a New Interview
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <AddNewInterview />
           </div>
         </section>
 
-        <section className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="font-semibold text-xl mb-4">Your Interviews</h2>
+        <section>
+          <h2 className="font-semibold text-xl text-gray-800 mb-4">
+            Your Interviews
+          </h2>
           <InterviewList />
         </section>
       </main>
