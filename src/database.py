@@ -87,5 +87,3 @@ class Database:
             print(f"An error occurred while fetching data: {e}")
             return []
 ```
-
-This code defines a `Database` class that handles connections to an SQLite database and provides methods for executing parameterized queries to prevent SQL injection vulnerabilities. The `execute_query`, `insert_data`, and `fetch_data` methods use parameterized queries to ensure safe input handling.
