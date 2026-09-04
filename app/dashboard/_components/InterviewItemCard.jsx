@@ -71,12 +71,6 @@ const InterviewItemCard = ({ interview, onDelete }) => {
         <p className="text-xs text-gray-400">
           Created At: {new Date(interview.createdAt).toLocaleDateString()}
         </p>
-        <p className="text-xs text-gray-400">
-          Interviewer: {interview?.interviewerName}
-        </p>
-        <p className="text-xs text-gray-400">
-          Duration: {interview?.duration} minutes
-        </p>
 
         <div className="flex justify-between mt-4 gap-2">
           <Button
