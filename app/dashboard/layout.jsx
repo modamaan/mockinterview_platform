@@ -11,10 +11,10 @@ const DashboardLayout = ({ children }) => {
   const [webCamEnabled, setWebCamEnabled] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-white text-gray-900">
       <Toaster />
       <Header logo={logo} />
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-6 py-8">
         <WebCamContext.Provider value={{ webCamEnabled, setWebCamEnabled }}>
           {children}
         </WebCamContext.Provider>
