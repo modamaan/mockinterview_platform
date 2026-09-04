@@ -1,3 +1,4 @@
+```
  # Ace your next interview :-  https://mockinterview-platform.vercel.app/
 
 <img width="1918" height="931" alt="Screenshot 2026-06-07 052703" src="https://github.com/user-attachments/assets/2f99dae2-eafa-4e9f-880f-f36cbd8e8695" />
@@ -80,4 +81,6 @@ OPENAI_API_KEY=sk-...
 # Important information banner text
 NEXT_PUBLIC_INFORMATION="Please ensure you are in a quiet room and your webcam is enabled."
 NEXT_PUBLIC_QUESTION_NOTE="Click on 'Record Answer' when you want to answer the question. You can review your transcription before submitting."
+```
+
 ```
