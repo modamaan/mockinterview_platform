@@ -52,41 +52,29 @@ const InterviewItemCard = ({ interview, onDelete }) => {
 
   return (
     <>
-      <div className="border border-gray-200 shadow-sm rounded-lg p-4 relative group hover:shadow-md transition-shadow bg-white">
+      <div className="border border-gray-200 shadow-sm rounded-lg p-4 relative group hover:shadow-lg transition-shadow bg-white">
         {/* Delete button — top-right corner */}
         <button
           onClick={() => setShowConfirm(true)}
-          className="absolute top-2 right-2 p-1.5 rounded-md text-gray-300 hover:text-red-500 hover:bg-red-50 transition-all opacity-0 group-hover:opacity-100"
+          className="absolute top-2 right-2 p-1.5 rounded-md text-gray-400 hover:text-red-500 hover:bg-red-50 transition-all opacity-0 group-hover:opacity-100"
           title="Delete interview"
         >
           <Trash2 className="h-4 w-4" />
         </button>
 
-        <div className="flex flex-col md:flex-row md:justify-between">
-          <div>
-            <h2 className="font-bold text-primary pr-8">
-              {interview?.jobPosition}
-            </h2>
-            <p className="text-sm text-gray-600">
-              {interview?.jobExperience} Years of experience
-            </p>
-            <p className="text-xs text-gray-400">
-              Created At: {new Date(interview.createdAt).toLocaleDateString()}
-            </p>
-          </div>
-          <div className="mt-2 md:mt-0">
-            <p className="text-sm text-gray-600">
-              Interviewer: {interview?.interviewerName}
-            </p>
-            <p className="text-sm text-gray-600">
-              Duration: {interview?.duration} mins
-            </p>
-          </div>
-        </div>
+        <h2 className="font-bold text-primary pr-8 text-lg">
+          {interview?.jobPosition}
+        </h2>
+        <p className="text-sm text-gray-600">
+          {interview?.jobExperience} Years of experience
+        </p>
+        <p className="text-xs text-gray-400">
+          Created At: {new Date(interview.createdAt).toLocaleDateString()}
+        </p>
 
-        <div className="flex justify-between mt-4 gap-1 md:gap-5">
+        <div className="flex justify-between mt-4 gap-2">
           <Button
-            variant="super"
+            variant="primary"
             onClick={onFeedback}
             size="sm"
             className="w-full"
@@ -94,7 +82,7 @@ const InterviewItemCard = ({ interview, onDelete }) => {
             Feedback
           </Button>
           <Button
-            variant="superOutline"
+            variant="outline"
             onClick={onStart}
             size="sm"
             className="w-full"
