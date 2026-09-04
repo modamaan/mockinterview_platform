@@ -38,40 +38,40 @@ const Header = ({ logo }) => {
         </Link>
         <nav className="hidden md:flex space-x-8">
           <Link href="/dashboard">
-            <a
+            <span
               className={`text-white hover:text-primary transition ${
                 path === "/dashboard" ? "font-bold" : ""
               }`}
             >
               Dashboard
-            </a>
+            </span>
           </Link>
           <Link href="/dashboard/question">
-            <a
+            <span
               className={`text-white hover:text-primary transition ${
                 path === "/dashboard/question" ? "font-bold" : ""
               }`}
             >
               Questions
-            </a>
+            </span>
           </Link>
           <Link href="/dashboard/upgrade">
-            <a
+            <span
               className={`text-white hover:text-primary transition ${
                 path === "/dashboard/upgrade" ? "font-bold" : ""
               }`}
             >
               Upgrade
-            </a>
+            </span>
           </Link>
           <Link href="/dashboard/howit">
-            <a
+            <span
               className={`text-white hover:text-primary transition ${
                 path === "/dashboard/howit" ? "font-bold" : ""
               }`}
             >
               How it works?
-            </a>
+            </span>
           </Link>
         </nav>
         <div className="flex items-center space-x-4">
@@ -140,40 +140,40 @@ const Header = ({ logo }) => {
         <div className="md:hidden bg-secondary">
           <nav className="px-4 pt-4 pb-3 space-y-1">
             <Link href="/dashboard">
-              <a
+              <span
                 className={`block text-white hover:text-primary transition ${
                   path === "/dashboard" ? "font-bold" : ""
                 }`}
               >
                 Dashboard
-              </a>
+              </span>
             </Link>
             <Link href="/dashboard/question">
-              <a
+              <span
                 className={`block text-white hover:text-primary transition ${
                   path === "/dashboard/question" ? "font-bold" : ""
                 }`}
               >
                 Questions
-              </a>
+              </span>
             </Link>
             <Link href="/dashboard/upgrade">
-              <a
+              <span
                 className={`block text-white hover:text-primary transition ${
                   path === "/dashboard/upgrade" ? "font-bold" : ""
                 }`}
               >
                 Upgrade
-              </a>
+              </span>
             </Link>
             <Link href="/dashboard/howit">
-              <a
+              <span
                 className={`block text-white hover:text-primary transition ${
                   path === "/dashboard/howit" ? "font-bold" : ""
                 }`}
               >
                 How it works?
-              </a>
+              </span>
             </Link>
           </nav>
         </div>
