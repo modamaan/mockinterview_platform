@@ -90,7 +90,7 @@ body,
   button {
     @apply shadow-[var(--box-shadow)] rounded-[var(--radius)];
   }
-  card {
+  .card {
     @apply shadow-[var(--box-shadow)] rounded-[var(--radius)];
   }
 }
