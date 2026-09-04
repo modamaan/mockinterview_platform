@@ -31,16 +31,16 @@ const Header = ({ logo }) => {
   const path = usePathname();
 
   return (
-    <div className="bg-blue-600 shadow-lg">
+    <div className="bg-indigo-700 shadow-md">
       <div className="w-[80%] m-auto flex gap-4 items-center justify-between py-4">
         <Link className="hidden md:block" href="/dashboard">
           <Image src={logo} width={80} height={80} alt="logo" />
         </Link>
-        <ul className="hidden md:flex gap-6 text-lg font-semibold text-white">
+        <ul className="hidden md:flex gap-6 text-lg font-medium text-gray-100">
           <Link href="/dashboard">
             <li
-              className={`hover:text-blue-300 transition-all cursor-pointer ${
-                path == "/dashboard" && "text-blue-300 font-bold"
+              className={`hover:text-indigo-400 transition-all cursor-pointer ${
+                path == "/dashboard" && "text-indigo-400 font-bold"
               }`}
             >
               Dashboard
@@ -48,8 +48,8 @@ const Header = ({ logo }) => {
           </Link>
           <Link href="/dashboard/question">
             <li
-              className={`hover:text-blue-300 transition-all cursor-pointer ${
-                path == "/dashboard/question" && "text-blue-300 font-bold"
+              className={`hover:text-indigo-400 transition-all cursor-pointer ${
+                path == "/dashboard/question" && "text-indigo-400 font-bold"
               }`}
             >
               Questions
@@ -57,8 +57,8 @@ const Header = ({ logo }) => {
           </Link>
           <Link href="/dashboard/upgrade">
             <li
-              className={`hover:text-blue-300 transition-all cursor-pointer ${
-                path == "/dashboard/upgrade" && "text-blue-300 font-bold"
+              className={`hover:text-indigo-400 transition-all cursor-pointer ${
+                path == "/dashboard/upgrade" && "text-indigo-400 font-bold"
               }`}
             >
               Upgrade
@@ -66,8 +66,8 @@ const Header = ({ logo }) => {
           </Link>
           <Link href="/dashboard/howit">
             <li
-              className={`hover:text-blue-300 transition-all cursor-pointer ${
-                path == "/dashboard/howit" && "text-blue-300 font-bold"
+              className={`hover:text-indigo-400 transition-all cursor-pointer ${
+                path == "/dashboard/howit" && "text-indigo-400 font-bold"
               }`}
             >
               How it works?
@@ -77,7 +77,7 @@ const Header = ({ logo }) => {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-blue-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            className="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-indigo-400 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
           >
             <span className="sr-only">Open main menu</span>
             {isOpen ? (
@@ -142,11 +142,11 @@ const Header = ({ logo }) => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-5">
-            <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-lg font-semibold text-white">
+            <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-lg font-medium text-gray-100">
               <Link href="/dashboard">
                 <li
-                  className={`hover:text-blue-300 transition-all cursor-pointer ${
-                    path == "/dashboard" && "text-blue-300 font-bold"
+                  className={`hover:text-indigo-400 transition-all cursor-pointer ${
+                    path == "/dashboard" && "text-indigo-400 font-bold"
                   }`}
                 >
                   Dashboard
@@ -154,8 +154,8 @@ const Header = ({ logo }) => {
               </Link>
               <Link href="/dashboard/question">
                 <li
-                  className={`hover:text-blue-300 transition-all cursor-pointer ${
-                    path == "/dashboard/question" && "text-blue-300 font-bold"
+                  className={`hover:text-indigo-400 transition-all cursor-pointer ${
+                    path == "/dashboard/question" && "text-indigo-400 font-bold"
                   }`}
                 >
                   Questions
@@ -163,8 +163,8 @@ const Header = ({ logo }) => {
               </Link>
               <Link href="/dashboard/upgrade">
                 <li
-                  className={`hover:text-blue-300 transition-all cursor-pointer ${
-                    path == "/dashboard/upgrade" && "text-blue-300 font-bold"
+                  className={`hover:text-indigo-400 transition-all cursor-pointer ${
+                    path == "/dashboard/upgrade" && "text-indigo-400 font-bold"
                   }`}
                 >
                   Upgrade
@@ -172,8 +172,8 @@ const Header = ({ logo }) => {
               </Link>
               <Link href="/dashboard/howit">
                 <li
-                  className={`hover:text-blue-300 transition-all cursor-pointer ${
-                    path == "/dashboard/howit" && "text-blue-300 font-bold"
+                  className={`hover:text-indigo-400 transition-all cursor-pointer ${
+                    path == "/dashboard/howit" && "text-indigo-400 font-bold"
                   }`}
                 >
                   How it works?
